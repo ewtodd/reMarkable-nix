@@ -4,7 +4,6 @@ Declarative packaging for the reMarkable desktop app - using nix flakes + wrapWi
 ## Usage
 ### Standalone
 ```
-```bash
 git clone https://github.com/YOUR_USERNAME/reMarkable-nix.git
 cd reMarkable-nix
 nix build
