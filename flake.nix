@@ -14,7 +14,7 @@
         wrapWine = ((import ./wrapWine.nix) { inherit pkgs; }).wrapWine;
         installer = builtins.fetchurl {
           url = "https://downloads.remarkable.com/latest/windows";
-          sha256 = "sha256:0wjkckls47ln3clqnzh162y1lf8p06sj7rd3pz2lldwpqghkcdqk";
+          sha256 = "sha256:169sw60rn3rhkbbxgyc3cny3sq98h2bsgm98kzf8m3zz9bwblpzc";
         };
         wine = pkgs.wineWowPackages.stagingFull;
         remarkable_bin = wrapWine {
