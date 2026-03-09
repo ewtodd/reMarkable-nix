@@ -17,7 +17,7 @@
           url = "https://downloads.remarkable.com/latest/windows";
           sha256 = "sha256:062d77y09adlmbqyzykdfkcdfamxdqzwdfgz1fcpnk9jcqkk4c87";
         };
-        wine = pkgs.wineWowPackages.stagingFull;
+        wine = pkgs.wineWow64Packages.stagingFull;
         remarkable_bin = wrapWine {
           wine = wine;
           name = "remarkable";
