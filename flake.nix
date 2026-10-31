@@ -14,8 +14,10 @@
         pkgs = import nixpkgs { inherit system; };
         wrapWine = ((import ./wrapWine.nix) { inherit pkgs; }).wrapWine;
         installer = builtins.fetchurl {
-          url = "https://downloads.remarkable.com/latest/windows";
-          sha256 = "sha256:062d77y09adlmbqyzykdfkcdfamxdqzwdfgz1fcpnk9jcqkk4c87";
+          # Pinned to the versioned download; latest/windows silently serves a
+          # new installer on every release, which rots this hash.
+          url = "https://downloads.remarkable.com/desktop/production/win/reMarkable-3.29.0.1804-win64.exe";
+          sha256 = "sha256:1ajq0fmxkiq3l0jl8l8cnjcnhy6jpv92mjjjxq10qkq0d3pbb8lf";
         };
         wine = pkgs.wineWow64Packages.stagingFull;
         remarkable_bin = wrapWine {
